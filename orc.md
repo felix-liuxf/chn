@@ -8,4 +8,4 @@ https://cloud.oracle.com/ucpricing
 https://iaas.us.oracle.com/regions/tokyo-region
 
 ### Oracle immersion translation 翻译
-https://gl-review2.translations.com/TRP/login
+https://gl-review2.translations.com/TRP/login   xliu hy
