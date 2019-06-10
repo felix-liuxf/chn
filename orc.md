@@ -9,3 +9,13 @@ https://iaas.us.oracle.com/regions/tokyo-region
 
 ### Oracle immersion translation 翻译
 https://gl-review2.translations.com/TRP/login   xliu hy
+
+
+### Oracle OCI Env 
+
+IAAS Portal https://iaas.us.oracle.com/
+My OCI https://myservices-cacct-10802f013d3740ac9a83be3beb736e9c.console.oraclecloud.com/mycloud/cloudportal/gettingStarted
+
+### Oracle Link
+Oracle Slack https://sales-emea-japac.slack.com/messages/CEU9M6YBG/
+
