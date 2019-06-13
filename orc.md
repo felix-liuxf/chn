@@ -19,4 +19,4 @@ My OCI https://myservices-cacct-10802f013d3740ac9a83be3beb736e9c.console.oraclec
 ### Oracle Link
 Oracle Slack https://sales-emea-japac.slack.com/messages/CEU9M6YBG/
 
-Oracle Training https://osan.netexam.com
+Oracle Training https://login.oracle.com/oamfed/idp/initiatesso?providerid=https://sso.netexam.com/sp
