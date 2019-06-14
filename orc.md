@@ -4,6 +4,10 @@ https://cloud.oracle.com/en_US/iaas/pricing
 
 https://cloud.oracle.com/ucpricing
 
+
+### 首尔数据中心
+https://iaas.us.oracle.com/regions/seoul-region
+
 ### 东京数据中心
 https://iaas.us.oracle.com/regions/tokyo-region
 
