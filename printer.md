@@ -4,7 +4,11 @@
 ```
 host: bjsop21b.cn.oracle.com 
 
-链接方式 用LPD模式
+Protocol:Line Printer Daemon - LPD
+
+Use : FX Print Driver for Mac OS X v1.5
+
+不要用系统自动识别的 4070 PS的驱动！！！
 ```
 
 ### FX DocuPrint P118 w
