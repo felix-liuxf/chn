@@ -10,3 +10,6 @@ https://github.com/oracle/learning-library/tree/master/oci-library
 ### Import Custom Image
 
 https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/importingcustomimagelinux.htm?Highlight=suse
+
+### OCI Service Limits
+https://docs.cloud.oracle.com/iaas/Content/General/Concepts/servicelimits.htm
