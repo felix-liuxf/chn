@@ -13,3 +13,5 @@ https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/importingcustomimagelin
 
 ### OCI Service Limits
 https://docs.cloud.oracle.com/iaas/Content/General/Concepts/servicelimits.htm
+### Data regions
+https://www.oracle.com/cloud/data-regions.html#northamerica
