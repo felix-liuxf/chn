@@ -1,3 +1,7 @@
+### OCI documents
+ 
+https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm
+
 ### OCI architecture design document
 
 https://cloud.oracle.com/iaas/whitepapers/best-practices-deploying-ha-architecture-oci.pdf
