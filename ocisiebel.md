@@ -15,3 +15,6 @@ https://140.238.166.146:4430/siebel/app/eautomotive/enu
 For Service - https://140.238.166.146:4430/siebel/app/callcenter/enu
 For Siebel Management Console (SMC) - https://140.238.166.146:4430/siebel/smc
 ```
+### SADMIN password
+
+>https://docs.oracle.com/cd/E74890_01/books/Secur/secur_changepwd004.htm
