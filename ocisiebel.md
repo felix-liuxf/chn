@@ -1,6 +1,7 @@
 ### siebel run on OCI 
 https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/compute-iaas/deploy_siebel_instance_OCI_VM/deploy_siebel_instance_OCI_VM.html#section5
-
+### Siebel run on AWS
+https://docs.aws.amazon.com/zh_cn/AmazonRDS/latest/UserGuide/Oracle.Resources.Siebel.html
 ### jenkins password
 
 ```
