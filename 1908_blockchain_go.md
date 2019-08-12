@@ -1,3 +1,9 @@
+### go lang env
+```
+GOROOT : the path that installation go lang.
+GOPATH : the path that development go lang applications.
+```
+
 ### goclipse installation
 
 - https://github.com/GoClipse/goclipse/blob/latest/documentation/Installation.md#installation
