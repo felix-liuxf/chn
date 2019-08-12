@@ -7,6 +7,10 @@ https://docs.aws.amazon.com/zh_cn/AmazonRDS/latest/UserGuide/Oracle.Resources.Si
 ```
 修改这个文件完成密码修改： /var/lib/jenkins/users/siebel_*/config.xml 
 siebel
+
+
+jbcrypt:$2a$10$DdaWzN64JgUtLdvxWIflcuQu2fgrrMSAMabF5TSrGK5nXitqK9ZMS
+111111
 ```
 
 ### enter URL
