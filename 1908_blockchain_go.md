@@ -22,3 +22,6 @@ mkdir -p $GOPATH/src/github.com/hyperledger
 cd $GOPATH/src/github.com/hyperledger
 git clone -b release-1.2 https://github.com/hyperledger/fabric.git
 ```
+###  Use a Mock Shim to Test a Chaincode
+
+  - https://docs.oracle.com/en/cloud/paas/blockchain-cloud/user/use-mock-shim-test-chaincode.html
