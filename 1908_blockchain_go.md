@@ -25,3 +25,7 @@ git clone -b release-1.2 https://github.com/hyperledger/fabric.git
 ###  Use a Mock Shim to Test a Chaincode
 
   - https://docs.oracle.com/en/cloud/paas/blockchain-cloud/user/use-mock-shim-test-chaincode.html
+
+### Go Lang ebook
+
+- https://github.com/unknwon/the-way-to-go_ZH_CN/blob/master/eBook/directory.md
