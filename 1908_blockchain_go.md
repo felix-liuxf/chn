@@ -46,3 +46,10 @@ curl -u felix.liuxf@qq.com:Huanying_123  -X GET https://9290E7F740304BC49D11C753
 curl -u felix.liuxf@qq.com:Huanying_123 -H Content-type:application/json  -X POST -d '{"channel":"default","chaincode":"example02","method":"query","args":["RedCar"],"chaincodeVer":"V1"}' https://9290E7F740304BC49D11C75333815DC4.blockchain.ocp.oraclecloud.com:443/restproxy1/bcsgw/rest/v1/transaction/invocation
 
 ```
+
+### Chaincode Unit Test
+```
+进行单元测试
+
+go test -v example02.go  example02_test.go
+```
