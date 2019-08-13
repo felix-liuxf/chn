@@ -7,6 +7,7 @@ GOPATH : the path that development go lang applications.
 ### goclipse installation
 
 - https://github.com/GoClipse/goclipse/blob/latest/documentation/Installation.md#installation
+- https://github.com/GoClipse/goclipse/blob/latest/documentation/UserGuide.md
 
 ### Go tools installation
 - preferences --> go --> tools --> downloads
