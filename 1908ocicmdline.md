@@ -60,3 +60,8 @@ oci network public-ip update --public-ip-id ocid1.publicip.oc1.ap-seoul-1.aaaaaa
 ```
 oci compute instance terminate --instance-id ocid1.instance.oc1.ap-seoul-1.abuwgljrvp5efjfo7gy7g6tgz36g6wdytjdp77t7tc3t7yxvc5nehok4tg2a --preserve-boot-volume true  --force
 ```
+
+### attach block volume
+https://docs.cloud.oracle.com/iaas/Content/Block/References/consistentdevicepaths.htm#images
+
+
