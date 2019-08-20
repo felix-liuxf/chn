@@ -14,5 +14,6 @@
 ### 常用SQL
 查看哪些用户被授予了DBA权限
 >select * from dba_role_privs where granted_role='DBA';
+
 回收权限:
 >revoke dba from xxx;
