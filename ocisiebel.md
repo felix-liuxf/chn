@@ -11,6 +11,10 @@ siebel
 
 jbcrypt:$2a$10$DdaWzN64JgUtLdvxWIflcuQu2fgrrMSAMabF5TSrGK5nXitqK9ZMS
 111111
+
+Restart Jenkins
+
+/etc/init.d/jenkins restart
 ```
 
 ### enter URL
