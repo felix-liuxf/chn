@@ -27,5 +27,7 @@ For Siebel Management Console (SMC) - https://140.238.166.146:4430/siebel/smc
 ### SADMIN password
 ```
 show ADMIN password :docker exec -it d14de4c1d503 env
+Enter docker shell
+docker exec -it b06fae9dcf21 /bin/bash
 https://docs.oracle.com/cd/E74890_01/books/Secur/secur_changepwd004.htm
 ```
