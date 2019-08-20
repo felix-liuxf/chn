@@ -10,3 +10,9 @@
 ### 修改SYSTEM 用户密码
 - sqlplus / as sysdba
 - alter user  sys identified by 123456;
+
+### 常用SQL
+查看哪些用户被授予了DBA权限
+>select * from dba_role_privs where granted_role='DBA';
+回收权限:
+>revoke dba from xxx;
