@@ -54,3 +54,20 @@ https://global-ebusiness.oraclecorp.com/OA_HTML/AppsLogin
 
 ### OMC OEM Portal
 http://omc.us.oracle.com/pls/htmldb/f?p=619:1::::::
+
+
+### Oracle 免费资源汇总
+1. [免费资源汇总](https://mp.weixin.qq.com/s/TSHQLSS5E9-Unb_8nmy9nQ)
+1. [Oracle Learning Library](http://www.oracle.com/goto/oll)
+1. [Oracle Dev Gym](https://devgym.oracle.com/)
+1. [Oracle Live SQL](https://livesql.oracle.com)
+1. [Oracle Database Features](https://apex.oracle.com/database-features/)
+1. [Ask Tom](https://asktom.oracle.com)
+1. [Oracle Blogs](http://blogs.oracle.com)
+1. [Oracle Github](https://github.com/oracle/)
+1. [Oracle Developer Portal](https://developer.oracle.com/)
+1. [Oracle APEX](https://apex.oracle.com/)
+1. [Oracle Cloud Native Labs](https://cloudnative.oracle.com)
+1.[Oracle Pre-Built Developer VMs](https://www.oracle.com/technetwork/community/developer-vm/index.html)
+
+
