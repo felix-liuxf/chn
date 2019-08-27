@@ -14,6 +14,7 @@ https://myoracle.webex.com/join/xianfeng.liu
 InterCall Conference Code / Password： 2861563/123456
 ```
 ## Oracle 内部资源汇总
+- [**Oracle Cloud Platform**](https://my.oracle.com/site/pd/fmw/index.html)
 - [Sales Central](https://salescentral.oracle.com)
 - [Oracle Customer and Partner Success Search](https://www.oracle.com/search/customers/_/N-p8qpZt2?Nr=112)
 - [IAAS PORTAL](https://iaas.us.oracle.com)
