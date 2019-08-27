@@ -20,7 +20,7 @@ InterCall Conference Code / Password： 2861563/123456
 ## Oracle 内部资源汇总
 
 - [Oracle Customer and Partner Success Search](https://www.oracle.com/search/customers/_/N-p8qpZt2?Nr=112)
-- Oracle Cloud IAAS Price[link1](https://cloud.oracle.com/en_US/iaas/pricing)[link2](https://cloud.oracle.com/ucpricing)
+- Oracle Cloud IAAS Price [link1](https://cloud.oracle.com/en_US/iaas/pricing) [link2](https://cloud.oracle.com/ucpricing)
 - [IAAS PORTAL](https://iaas.us.oracle.com)
 - [My OCI](https://myservices-cacct-10802f013d3740ac9a83be3beb736e9c.console.oraclecloud.com/mycloud/cloudportal/gettingStarted)
 - [OMC OEM Portal](http://omc.us.oracle.com/pls/htmldb/f?p=619:1::::::)
