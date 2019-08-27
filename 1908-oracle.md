@@ -51,3 +51,6 @@ Oracle Training https://login.oracle.com/oamfed/idp/initiatesso?providerid=https
 ### 内部考试
 
 https://global-ebusiness.oraclecorp.com/OA_HTML/AppsLogin
+
+### OMC OEM Portal
+http://omc.us.oracle.com/pls/htmldb/f?p=619:1::::::
