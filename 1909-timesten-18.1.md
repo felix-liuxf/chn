@@ -32,3 +32,40 @@ set $TIMESTEN_HOME/conf/sys.odbc.ini
   java GridSample -cs -dsn sgttcs -uid ttuser -pwd timesten
 ```
 
+### JDBC code sample 
+```java
+
+import com.timesten.jdbc.TimesTenConnection;
+import com.timesten.jdbc.TimesTenDataSource;
+
+public class HelloConn {
+	// TT connection
+	public static void main(String[] args) {
+		TimesTenDataSource ttDS = new TimesTenDataSource(); // TT datasource
+		TimesTenConnection ttConn = null;
+		// TODO Auto-generated method stub
+
+		
+			System.out.println("get Conn");
+			String URL = "jdbc:timesten:client:DSN=sgttcs";
+
+			ttDS.setUrl(URL);
+			ttDS.setUser("osgpc");
+			ttDS.setPassword("oracle");
+			ttConn = (TimesTenConnection) ttDS.getConnection();
+			// Connection conn = DriverManager.getConnection (URL);
+			System.out.println(ttConn);
+			// 执行SQL语句
+
+			ttConn.close();
+
+		} catch (Exception ex) {
+			// 输出错误信息
+			ex.printStackTrace();
+		}
+
+	}
+
+}
+
+```
