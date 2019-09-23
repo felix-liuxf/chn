@@ -18,6 +18,7 @@ InterCall Conference Code / Password： 2861563/123456
 - [Sales Central](https://salescentral.oracle.com)
 - [Oracle Customer and Partner Success Search](https://www.oracle.com/search/customers/_/N-p8qpZt2?Nr=112)
 - [IAAS Portal](https://iaas.us.oracle.com)
+- [PAAS Portal](http://my.oracle.com/site/pd/fmw/products/index.html)
 - [OMC OEM Portal](http://omc.us.oracle.com/pls/htmldb/f?p=619:1::::::)
 - [ODA Portal Oracle digital assistant](https://stbeehive.oracle.com/content/dav/st/chatbots/Public%20Documents/index.html)
 - [My OCI](https://myservices-cacct-10802f013d3740ac9a83be3beb736e9c.console.oraclecloud.com/mycloud/cloudportal/gettingStarted)
