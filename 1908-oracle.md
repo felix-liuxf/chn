@@ -18,6 +18,7 @@ InterCall Conference Code / Password： 2861563/123456
 
 - www-proxy.us.oracle.com
 - www-proxy.jp.oracle.com:80
+- cn-proxy.jp.oracle.com
 
 ### Oracle 内部资源汇总
 - [**Oracle Cloud Platform**](https://my.oracle.com/site/pd/fmw/index.html)
