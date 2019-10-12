@@ -1,7 +1,7 @@
 ### 账号信息
 ```
 vpn account : xianfliu_cn
-
+https://myaccess.oraclevpn.com 下载VPN软件
 考试地址
 http://www.pearsonvue.com/oracle
 xiliu0286 /亚2
