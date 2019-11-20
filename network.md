@@ -89,5 +89,5 @@ B类地址的表示范围为：128.0.0.0~191.255.255.255，默认网络掩码为
 
 
 ### reference link
-https://www.pawprint.net/designresources/netmask-converter.php
-http://ip.chacuo.net/ipcalc
+- https://www.pawprint.net/designresources/netmask-converter.php
+- http://ip.chacuo.net/ipcalc
