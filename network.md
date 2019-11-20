@@ -86,3 +86,8 @@ B类地址的表示范围为：128.0.0.0~191.255.255.255，默认网络掩码为
 
 六、169.254.*.*
 如果你的主机使用了DHCP功能自动获得一个ip地址，那么当你的DHCP服务器发生故障或响应时间太长而超出系统规定的一个时间，windows系统会为你分配这样一个地址。如果你发现你的主机ip地址是个诸如此类的地址，很不幸，十有八九是你的网络不能正常运行了.
+
+
+### reference link
+https://www.pawprint.net/designresources/netmask-converter.php
+http://ip.chacuo.net/ipcalc
