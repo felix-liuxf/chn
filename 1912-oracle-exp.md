@@ -23,6 +23,16 @@ FROM(
      SELECT SUM(BYTES)/1024/1024/1024
      FROM V$LOG
      );
+     
+     
+     1、查看所有表空间及表空间大小：
+select tablespace_name ,sum(bytes) / 1024 / 1024 as MB　from dba_data_files group by tablespace_name;
+
+2、查看所有表空间对应的数据文件：
+select tablespace_name,file_name from dba_data_files;
+
+3、修改数据文件大小：
+alter database datafile 'H:\ORACLE\PRODUCT\10.1.0\ORADATA\ORACLE\USERS01.DBF' RESIZE 10240M;
 ```     
 
 
