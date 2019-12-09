@@ -1,3 +1,32 @@
+### oracle查看数据库文件大小 
+保留两位小数以GB为单位显示数据文件大小
+SELECT ROUND(SUM(BYTES)/1024/1024/1024,2)||'GB' FROM DBA_DATA_FILES;
+
+以MB为单位表空间分组显示数据文件大小：
+
+SELECT TABLESPACE_NAME,SUM(BYTES)/1024/1024 AS MB FROM DBA_DATA_FILES GROUP BY TABLESPACE_NAME;
+显示数据库中临时文件的大小：
+```
+SELECT SUM(BYTES)/1024/1024/1024 AS GB FROM DBA_TEMP_FILES;
+显示数据库中日志文件的大小：
+
+SELECT SUM(BYTES)/1024/1024/1024 AS GB FROM V$LOG;
+显示数据库中数据文件、临时文件、日志文件的总大小：
+SELECT SUM(GB) AS GB
+FROM(
+     SELECT SUM(BYTES)/1024/1024/1024 AS GB 
+     FROM DBA_DATA_FILES
+     UNION ALL
+     SELECT SUM(BYTES)/1024/1024/1024
+     FROM DBA_TEMP_FILES
+     UNION ALL
+     SELECT SUM(BYTES)/1024/1024/1024
+     FROM V$LOG
+     );
+```     
+
+
+
 ### 设置exp 文件大小
 $ expdp user/pwd directory=dump_file dumpfile=expdp_20190416_%U.dmp logfile=expdp_20100820.log filesize=500M parallel=4
 
