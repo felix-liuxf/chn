@@ -29,3 +29,8 @@ Virtual Machine instances:
 VM.Standard1.1 shape - virtual machine powered by processor Intel Xeon 2.3 GHz E5-2699 v3. Processor contains 18 physical cores (18 OCPU) and in this specific shape, the customer is provisioned with 1 physical core (OCPU). The equivalent to 1 OCPU would be 2 threads.
 
 To sum it up, when comparing offers or just talking to different providers, better use measure "thread" instead of "core", "processor" or "CPU".
+
+
+
+###  reference link
+https://aws.amazon.com/cn/ec2/instance-types/
