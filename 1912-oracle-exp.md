@@ -1,10 +1,21 @@
+### 查看数据库的字符集
+
+ select * from nls_database_parameters;
+
 ### oracle查看数据库文件大小 
+
 保留两位小数以GB为单位显示数据文件大小
 SELECT ROUND(SUM(BYTES)/1024/1024/1024,2)||'GB' FROM DBA_DATA_FILES;
+
+按Schema用户查看数据库大小
+select owner,sum(bytes)/1024/1024||'M' from DBA_SEGMENTS group by owner
+
 
 以MB为单位表空间分组显示数据文件大小：
 
 SELECT TABLESPACE_NAME,SUM(BYTES)/1024/1024 AS MB FROM DBA_DATA_FILES GROUP BY TABLESPACE_NAME;
+
+
 显示数据库中临时文件的大小：
 ```
 SELECT SUM(BYTES)/1024/1024/1024 AS GB FROM DBA_TEMP_FILES;
@@ -26,7 +37,7 @@ FROM(
      
      
      1、查看所有表空间及表空间大小：
-select tablespace_name ,sum(bytes) / 1024 / 1024 as MB　from dba_data_files group by tablespace_name;
+select tablespace_name ,sum(bytes)/1024/1024 as MB　from dba_data_files group by tablespace_name;
 
 2、查看所有表空间对应的数据文件：
 select tablespace_name,file_name from dba_data_files;
@@ -216,3 +227,39 @@ impdp lhr/lhr    SCHEMAS=scott     DIRECTORY=DATA_PUMP_DIR     DUMPFILE=DATA_PUM
     2．若热备份不成功，所得结果不可用于时间点的恢复。  
 
     3．因难于维护，所以要特别仔细小心，不允许“以失败而告终”。 
+    
+    
+    
+    
+    ### sqlplus将查询结果重定向到文件，不输出到屏幕
+    ```
+--每行的字符数目
+set linesize 8000
+--该参数设置每页输出的行数。n=0表示不产生新页
+set pagesize 0
+--显示和拷贝long类型值的最大宽度的设置，最大值2G
+set long 2000000000
+--sqlplus检索long类型值的增量大小.由于内存的限制 可按增量检索
+--一项目当时plsql和sqldeveloper都有明显的网络延迟问题，sqlplus缺省没有问题，设置此参数后也能够使问题重现
+set longchunksize 9000000
+--列的设置
+--col username format a4 
+--col a format 999,999,999
+--各列的标题（包括文字和下划线）在结果报表上显示。
+set heading on 
+--查询结束时，给出查询结果的记录数信息。禁止显示最后一行的计数反馈信息
+set feedback off 
+--执行命令文件时，命令本身是否显示在屏幕上
+set echo off
+--控制由文件执行命令所产生的输出的显示
+set termout off
+--清空多余的空格，如：linesize过长
+set trimout on
+set trimspool on
+set timing on
+
+--生产数据命令
+spool result.txt;
+select * from nls_database_parameters;
+spool off;
+    ```
