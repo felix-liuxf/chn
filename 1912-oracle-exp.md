@@ -1,6 +1,9 @@
 ### 查看数据库的字符集
 
  select * from nls_database_parameters;
+ 
+### exp 设置oracle客户端字符集
+export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
 
 ### oracle查看数据库文件大小 
 
@@ -49,6 +52,30 @@ RDSADMIN			|	7
 UNDO_T1 			  |  92020
 UNDOTBS2			   |   100
 
+### linux 查询网络流量是多少
+
+- sar -n DEV 5 10
+
+### 查询数据库的分区表
+```
+如果查询当前用户下得分区表：
+select * from user_tables where partitioned='YES'
+如果要查询整个数据库中的分区表：
+select * from dba_tables where partitioned='YES'
+如果要查询某个用户下得分区表：
+select * from dba_tables where partitioned='YES' and owner='ABCDEFG'
+其中ABCDEFG为用户名
+```
+
+
+### exp 按用户Schema导出。
+exp transmaster/Ora09haier24@13.228.121.188/ORACLE1 owner=SIEBEL direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 
+### exp 按表导出Schema导出。
+exp transmaster/Ora09haier24@13.228.121.188/ORACLE1 tables in () direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 
+
+
+
+
 ### 查询表的大小
 - SELECT segment_name AS TABLENAME,round(BYTES/1024/1024,2)  FROM user_segments WHERE segment_name='SIEBEL.S_ORG_EXT_LSX';
 SELECT segment_name AS TABLENAME,round(BYTES/1024/1024,2)  FROM SIEBEL.user_segments;
@@ -91,6 +118,9 @@ alter database datafile 'H:\ORACLE\PRODUCT\10.1.0\ORADATA\ORACLE\USERS01.DBF' RE
 ```     
 
 select * from user_tables t where t.NUM_ROWS is not null  order by t.NUM_ROWS  desc
+
+
+
 
 ### 设置exp 文件大小
 $ expdp user/pwd directory=dump_file dumpfile=expdp_20190416_%U.dmp logfile=expdp_20100820.log filesize=500M parallel=4
@@ -307,7 +337,12 @@ spool result.txt;
 select * from nls_database_parameters;
 spool off;
     ```
+    
+SELECT s.username, t.sid,s.serial#, SUM(VALUE/100) as "cpu usage (seconds)" FROM v$session s, v$sesstat t,  v$statname n WHERE t.STATISTIC# = n.STATISTIC# AND NAME like '%CPU used by this session%' AND t.SID = s.SID AND s.status='ACTIVE' AND s.username is not null GROUP BY username,t.sid,s.serial#    
+    
 ### Reference Link
 - http://blog.itpub.net/117319/viewspace-1410931/
 - https://blog.csdn.net/haiross/article/details/27579945
+- http://www.oracle-wiki.net/startsql#toc16
+- 数据库字符集 http://blog.itpub.net/26736162/viewspace-2126759/
 
