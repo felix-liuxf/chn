@@ -70,9 +70,9 @@ select * from dba_tables where partitioned='YES' and owner='ABCDEFG'
 
 ### exp 按用户Schema导出。
 exp transmaster/Ora09haier24@13.228.121.188/ORACLE1 owner=SIEBEL direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 
-### exp 按表导出Schema导出。
-exp transmaster/Ora09haier24@13.228.121.188/ORACLE1 tables in () direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 
-
+### exp 按表导出导出。
+exp transmaster/Ora09haier24@13.228.121.188/ORACLE1  direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 tables = 'SIEBEL.S_APPL_CON';
+exp transmaster/Ora09haier24@13.228.121.188/ORACLE1  direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 tables = 'SIEBEL.S_APPL_CON,SYSTEM.TABLE2';
 
 
 
