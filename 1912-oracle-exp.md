@@ -4,11 +4,30 @@
 
 ### oracle查看数据库文件大小 
 
-保留两位小数以GB为单位显示数据文件大小
-SELECT ROUND(SUM(BYTES)/1024/1024/1024,2)||'GB' FROM DBA_DATA_FILES;
+- 保留两位小数以GB为单位显示数据文件大小
+- SELECT ROUND(SUM(BYTES)/1024/1024/1024,2)||'GB' FROM DBA_DATA_FILES;
+>ROUND(SUM(BYTES)/1024/1024/1024,2)||'GB'
+>------------------------------------------
+>975.08GB
 
-按Schema用户查看数据库大小
-select owner,sum(bytes)/1024/1024||'M' from DBA_SEGMENTS group by owner
+### 按Schema用户查看数据库大小
+- select owner,sum(bytes)/1024/1024||'M' from DBA_SEGMENTS group by owner
+
+OWNER | 数据量M
+------------ | -------------
+SIEBEL | 705091.25M
+OUTLN |.5625M
+CTXSYS |3.9375M
+INFO_USER |168854.625M
+SPIUSERCREATE |.375M
+SYSTEM |32.1875M
+RDSADMIN |.25M
+DBSNMP |1.25M
+GSMADMIN_INTERNAL |1.375M
+TRANSMASTER |.375M
+XDB |63M
+SYS | 44248.75M
+
 
 
 以MB为单位表空间分组显示数据文件大小：
