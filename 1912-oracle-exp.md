@@ -49,7 +49,18 @@ RDSADMIN			|	7
 UNDO_T1 			  |  92020
 UNDOTBS2			   |   100
 
+### 查询表的大小
+- SELECT segment_name AS TABLENAME,round(BYTES/1024/1024,2)  FROM user_segments WHERE segment_name='SIEBEL.S_ORG_EXT_LSX';
+SELECT segment_name AS TABLENAME,round(BYTES/1024/1024,2)  FROM SIEBEL.user_segments;
+
+另一种表实际使用的空间。这样查询：
+
+analyze table SIEBEL.S_ORG_EXT_LSX compute statistics; select num_rows * avg_row_len from user_tables where table_name = 'SIEBEL.S_ORG_EXT_LSX';
+
 显示数据库中临时文件的大小：
+analyze table SIEBEL.S_ORG_EXT_LSX compute statistics;
+
+select num_rows * avg_row_len from user_tables where table_name = 'SIEBEL.S_ORG_EXT_LSX';
 ```
 SELECT SUM(BYTES)/1024/1024/1024 AS GB FROM DBA_TEMP_FILES;
 显示数据库中日志文件的大小：
@@ -79,7 +90,7 @@ select tablespace_name,file_name from dba_data_files;
 alter database datafile 'H:\ORACLE\PRODUCT\10.1.0\ORADATA\ORACLE\USERS01.DBF' RESIZE 10240M;
 ```     
 
-
+select * from user_tables t where t.NUM_ROWS is not null  order by t.NUM_ROWS  desc
 
 ### 设置exp 文件大小
 $ expdp user/pwd directory=dump_file dumpfile=expdp_20190416_%U.dmp logfile=expdp_20100820.log filesize=500M parallel=4
@@ -296,3 +307,7 @@ spool result.txt;
 select * from nls_database_parameters;
 spool off;
     ```
+### Reference Link
+- http://blog.itpub.net/117319/viewspace-1410931/
+- https://blog.csdn.net/haiross/article/details/27579945
+
