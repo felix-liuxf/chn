@@ -74,7 +74,9 @@ exp transmaster/Ora09haier24@13.228.121.188/ORACLE1 owner=SIEBEL direct=y record
 exp transmaster/Ora09haier24@13.228.121.188/ORACLE1  direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 tables = 'SIEBEL.S_APPL_CON';
 exp transmaster/Ora09haier24@13.228.121.188/ORACLE1  direct=y recordlength=65535 buffer=104857600 file=db.dmp log=exp.log feedback=10000 tables = 'SIEBEL.S_APPL_CON,SYSTEM.TABLE2';
 
-
+### 查询用户下的表
+- select * from all_tables where owner='TEST'；
+- select table_name from user_tables;
 
 ### 查询表的大小
 - SELECT segment_name AS TABLENAME,round(BYTES/1024/1024,2)  FROM user_segments WHERE segment_name='SIEBEL.S_ORG_EXT_LSX';
