@@ -24,3 +24,13 @@ title: git 基本用法
 - git add newfile
 - git commit -m "comment"
 - git push
+
+## git 修改文件后提交到远程
+修改文件后，怎么提交到远程仓库
+```
+git status 查看git是否有修改内容需要提交
+git add 指向需要提交的内容文件
+git commit 提交到本地库
+git push origin master 提交到远程仓库
+```
+
