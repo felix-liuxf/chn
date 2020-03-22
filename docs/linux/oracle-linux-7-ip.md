@@ -1,0 +1,23 @@
+---
+title: linux7设置IP地址
+---
+### dhcp ip
+```
+DEVICE=eth0
+BOOTPROTO=DHCP
+ONBOOT=yes
+
+```
+### static ip
+```
+DEVICE=eth0
+BOOTPROTO=static
+IPADDR=146.175.139.13
+NETMASK=255.255.255.0
+GATEWAY=146.175.139.255
+HWADDR=00:25:90:81:5e:64
+NM_COnTROLLED=no		
+ONBOOT=yes
+TYPE=Ethernet
+IPV6INIT=no
+```
