@@ -1,5 +1,5 @@
 ---
-title: 常用开源License 1
+title: 常用开源License 
 ---
 
 ## [Apache License](http://www.apache.org/licenses/)
