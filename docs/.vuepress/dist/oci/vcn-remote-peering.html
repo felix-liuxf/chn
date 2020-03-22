@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Backbone Remote Peering</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.24d7f512.css" as="style"><link rel="preload" href="/assets/js/app.49a8ab27.js" as="script"><link rel="preload" href="/assets/js/2.c25d0ff7.js" as="script"><link rel="preload" href="/assets/js/47.371f9d5a.js" as="script"><link rel="prefetch" href="/assets/js/10.f3485ecb.js"><link rel="prefetch" href="/assets/js/11.77ddc54e.js"><link rel="prefetch" href="/assets/js/12.f0c6e3cb.js"><link rel="prefetch" href="/assets/js/13.08b17c15.js"><link rel="prefetch" href="/assets/js/14.ee7337a8.js"><link rel="prefetch" href="/assets/js/15.fc3b76c8.js"><link rel="prefetch" href="/assets/js/16.869a2a8e.js"><link rel="prefetch" href="/assets/js/17.a87283b9.js"><link rel="prefetch" href="/assets/js/18.a6e2a0fd.js"><link rel="prefetch" href="/assets/js/19.fdd8832c.js"><link rel="prefetch" href="/assets/js/20.7953f7a8.js"><link rel="prefetch" href="/assets/js/21.89cfe71b.js"><link rel="prefetch" href="/assets/js/22.95e3c355.js"><link rel="prefetch" href="/assets/js/23.15c1c913.js"><link rel="prefetch" href="/assets/js/24.f6d17a57.js"><link rel="prefetch" href="/assets/js/25.d93e7d01.js"><link rel="prefetch" href="/assets/js/26.a3173bd5.js"><link rel="prefetch" href="/assets/js/27.42300fe5.js"><link rel="prefetch" href="/assets/js/28.19910706.js"><link rel="prefetch" href="/assets/js/29.50e0d9ad.js"><link rel="prefetch" href="/assets/js/3.bc388254.js"><link rel="prefetch" href="/assets/js/30.ebcb7fc3.js"><link rel="prefetch" href="/assets/js/31.fdcc6f9a.js"><link rel="prefetch" href="/assets/js/32.e47e4284.js"><link rel="prefetch" href="/assets/js/33.8c81bc5b.js"><link rel="prefetch" href="/assets/js/34.4d627b35.js"><link rel="prefetch" href="/assets/js/35.d697fdcf.js"><link rel="prefetch" href="/assets/js/36.a820d4b9.js"><link rel="prefetch" href="/assets/js/37.e3a70681.js"><link rel="prefetch" href="/assets/js/38.4dd57beb.js"><link rel="prefetch" href="/assets/js/39.2da401de.js"><link rel="prefetch" href="/assets/js/4.b2c0328d.js"><link rel="prefetch" href="/assets/js/40.806d6da4.js"><link rel="prefetch" href="/assets/js/41.96dbc8bd.js"><link rel="prefetch" href="/assets/js/42.9038af3a.js"><link rel="prefetch" href="/assets/js/43.8fe03124.js"><link rel="prefetch" href="/assets/js/44.8b899948.js"><link rel="prefetch" href="/assets/js/45.0a31b026.js"><link rel="prefetch" href="/assets/js/46.2444d88e.js"><link rel="prefetch" href="/assets/js/48.3ce05ea0.js"><link rel="prefetch" href="/assets/js/49.2345fbdb.js"><link rel="prefetch" href="/assets/js/5.d9814aa0.js"><link rel="prefetch" href="/assets/js/50.00bd4430.js"><link rel="prefetch" href="/assets/js/51.dd05fd07.js"><link rel="prefetch" href="/assets/js/52.e9690894.js"><link rel="prefetch" href="/assets/js/53.4d349856.js"><link rel="prefetch" href="/assets/js/54.73f1c7a6.js"><link rel="prefetch" href="/assets/js/55.a4142e27.js"><link rel="prefetch" href="/assets/js/56.b5ed0ae0.js"><link rel="prefetch" href="/assets/js/57.e9c9e0fd.js"><link rel="prefetch" href="/assets/js/58.a7efe57f.js"><link rel="prefetch" href="/assets/js/59.e1cfa9ed.js"><link rel="prefetch" href="/assets/js/6.292626c0.js"><link rel="prefetch" href="/assets/js/60.6aa86999.js"><link rel="prefetch" href="/assets/js/61.4860c910.js"><link rel="prefetch" href="/assets/js/62.363470c1.js"><link rel="prefetch" href="/assets/js/63.58432c66.js"><link rel="prefetch" href="/assets/js/64.bb28d5fd.js"><link rel="prefetch" href="/assets/js/65.ec551ab9.js"><link rel="prefetch" href="/assets/js/66.8b7c199e.js"><link rel="prefetch" href="/assets/js/67.1c5f2bb3.js"><link rel="prefetch" href="/assets/js/68.024dc040.js"><link rel="prefetch" href="/assets/js/69.f17b3f7d.js"><link rel="prefetch" href="/assets/js/7.6a8bf628.js"><link rel="prefetch" href="/assets/js/70.a372f895.js"><link rel="prefetch" href="/assets/js/71.3c16fa6d.js"><link rel="prefetch" href="/assets/js/72.129a7a6e.js"><link rel="prefetch" href="/assets/js/73.688fd5ce.js"><link rel="prefetch" href="/assets/js/74.b288d7e2.js"><link rel="prefetch" href="/assets/js/8.67d56e91.js"><link rel="prefetch" href="/assets/js/9.82240a08.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.24d7f512.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="osaka-jaddah"><a href="#osaka-jaddah" class="header-anchor">#</a> Osaka &lt;--&gt; Jaddah</h2> <ul><li>Osaka vm 10.1.1.2  VCN-A</li> <li>Jaddah vm 10.3.1.2 VCN-C</li></ul> <h2 id="build-connection-step"><a href="#build-connection-step" class="header-anchor">#</a> build connection step</h2> <ol><li>In Region Osaka</li> <li>Create DRG-1</li> <li>Create Remote Peering-1</li> <li>Attach VCN-A</li> <li>Add DRG Route 10.3.0.0/16</li> <li>In Region Jaddah</li> <li>Create DRG-2</li> <li>Create Remote Peering-2</li> <li>Attach VCN-C</li> <li>Add DRG Route 10.1.0.0/16</li> <li>Establish remote peering connection from Osaka to Jaddah</li></ol> <h2 id="traceroute-private-ip-10-3-1-2"><a href="#traceroute-private-ip-10-3-1-2" class="header-anchor">#</a> traceroute private ip 10.3.1.2</h2> <div class="language- extra-class"><pre class="language-text"><code>traceroute to 10.3.1.2 (10.3.1.2), 30 hops max, 60 byte packets
+ 1  140.91.218.2 (140.91.218.2)  0.130 ms 140.91.218.7 (140.91.218.7)  0.093 ms  0.089 ms
+ 2  140.91.220.13 (140.91.220.13)  336.242 ms 140.91.220.3 (140.91.220.3)  336.195 ms  336.206 ms
+ 3  * * *
+ 4  * * *
+</code></pre></div><h2 id="traceroute-public-ip-158-101-225-98"><a href="#traceroute-public-ip-158-101-225-98" class="header-anchor">#</a> traceroute public ip 158.101.225.98</h2> <div class="language- extra-class"><pre class="language-text"><code>traceroute to 158.101.225.98 (158.101.225.98), 30 hops max, 60 byte packets
+ 1  140.91.218.2 (140.91.218.2)  0.140 ms 140.91.218.1 (140.91.218.1)  0.091 ms  0.085 ms
+ 2  140.91.220.5 (140.91.220.5)  336.302 ms 140.91.220.1 (140.91.220.1)  336.345 ms 140.91.220.2 (140.91.220.2)  336.021 ms
+ 3  * * *
+ 4  * * *
+ 5  * * *
+</code></pre></div><h2 id="ping-public-ip-158-101-225-98"><a href="#ping-public-ip-158-101-225-98" class="header-anchor">#</a> ping public ip 158.101.225.98</h2> <div class="language- extra-class"><pre class="language-text"><code>PING 158.101.225.98 (158.101.225.98) 56(84) bytes of data.
+64 bytes from 158.101.225.98: icmp_seq=1 ttl=62 time=336 ms
+64 bytes from 158.101.225.98: icmp_seq=2 ttl=62 time=336 ms
+64 bytes from 158.101.225.98: icmp_seq=3 ttl=62 time=336 ms
+</code></pre></div><h2 id="ping-private-ip-10-3-1-2"><a href="#ping-private-ip-10-3-1-2" class="header-anchor">#</a> ping private ip 10.3.1.2</h2> <div class="language- extra-class"><pre class="language-text"><code>PING 10.3.1.2 (10.3.1.2) 56(84) bytes of data.
+64 bytes from 10.3.1.2: icmp_seq=1 ttl=62 time=336 ms
+64 bytes from 10.3.1.2: icmp_seq=2 ttl=62 time=336 ms
+64 bytes from 10.3.1.2: icmp_seq=3 ttl=62 time=336 ms
+64 bytes from 10.3.1.2: icmp_seq=4 ttl=62 time=336 ms
+64 bytes from 10.3.1.2: icmp_seq=5 ttl=62 time=336 ms
+</code></pre></div><h2 id="sftp-private-ip-10-3-12"><a href="#sftp-private-ip-10-3-12" class="header-anchor">#</a> sftp private ip 10.3.12</h2> <div class="language- extra-class"><pre class="language-text"><code>Connected to 10.3.1.2.
+sftp&gt; put a.tar
+Uploading a.tar to /home/opc/a.tar
+a.tar                                         100%  267MB   5.6MB/s   00:47
+sftp&gt;
+</code></pre></div><h2 id="sftp-public-ip-158-101-225-98"><a href="#sftp-public-ip-158-101-225-98" class="header-anchor">#</a> sftp public ip 158.101.225.98</h2> <div class="language- extra-class"><pre class="language-text"><code>Connected to 158.101.225.98.
+sftp&gt; put a.tar
+Uploading a.tar to /home/opc/a.tar
+a.tar                                         100%  267MB   5.6MB/s   00:47
+sftp&gt;
+</code></pre></div><h2 id="backbone-test-result"><a href="#backbone-test-result" class="header-anchor">#</a> Backbone Test Result</h2> <table><thead><tr><th>Region</th> <th>Ping 公网IP</th> <th>ping 内网IP</th> <th>sftp 公网速度</th> <th>sftp 内网速度</th></tr></thead> <tbody><tr><td>Sao Paulo 到 Tokyo</td> <td>306ms</td> <td>304ms</td> <td>6.1MB/s</td> <td>6.1MB/s</td></tr> <tr><td>Sao Paulo 到 Mambai</td> <td>305ms</td> <td>305ms</td> <td>6.1MB/s</td> <td>6.1MB/s</td></tr></tbody></table> <p>saopaulo - tokyo
+PING 158.101.146.215 (158.101.146.215) 56(84) bytes of data.
+64 bytes from 158.101.146.215: icmp_seq=1 ttl=62 time=315 ms
+64 bytes from 158.101.146.215: icmp_seq=2 ttl=62 time=315 ms
+64 bytes from 158.101.146.215: icmp_seq=3 ttl=62 time=315 ms
+64 bytes from 158.101.146.215: icmp_seq=4 ttl=62 time=315 ms
+64 bytes from 158.101.146.215: icmp_seq=5 ttl=62 time=315 ms</p> <p>64 bytes from 10.1.1.2: icmp_seq=1 ttl=62 time=314 ms
+64 bytes from 10.1.1.2: icmp_seq=2 ttl=62 time=314 ms
+64 bytes from 10.1.1.2: icmp_seq=3 ttl=62 time=314 ms</p> <p>Connected to 10.1.1.2.
+sftp&gt; put a.tar
+Uploading a.tar to /home/opc/a.tar
+a.tar                                         100%  267MB   6.1MB/s   00:44
+sftp&gt;</p> <p>Connected to 152.67.38.64.
+sftp&gt; put a.tar
+Uploading a.tar to /home/opc/a.tar
+a.tar                                         100%  267MB   6.1MB/s   00:43
+sftp</p> <h2 id="reference-link"><a href="#reference-link" class="header-anchor">#</a> Reference Link</h2> <ul><li>https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.49a8ab27.js" defer></script><script src="/assets/js/2.c25d0ff7.js" defer></script><script src="/assets/js/47.371f9d5a.js" defer></script>
+  </body>
+</html>

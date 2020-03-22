@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx 常用配置</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.24d7f512.css" as="style"><link rel="preload" href="/assets/js/app.49a8ab27.js" as="script"><link rel="preload" href="/assets/js/2.c25d0ff7.js" as="script"><link rel="preload" href="/assets/js/51.dd05fd07.js" as="script"><link rel="prefetch" href="/assets/js/10.f3485ecb.js"><link rel="prefetch" href="/assets/js/11.77ddc54e.js"><link rel="prefetch" href="/assets/js/12.f0c6e3cb.js"><link rel="prefetch" href="/assets/js/13.08b17c15.js"><link rel="prefetch" href="/assets/js/14.ee7337a8.js"><link rel="prefetch" href="/assets/js/15.fc3b76c8.js"><link rel="prefetch" href="/assets/js/16.869a2a8e.js"><link rel="prefetch" href="/assets/js/17.a87283b9.js"><link rel="prefetch" href="/assets/js/18.a6e2a0fd.js"><link rel="prefetch" href="/assets/js/19.fdd8832c.js"><link rel="prefetch" href="/assets/js/20.7953f7a8.js"><link rel="prefetch" href="/assets/js/21.89cfe71b.js"><link rel="prefetch" href="/assets/js/22.95e3c355.js"><link rel="prefetch" href="/assets/js/23.15c1c913.js"><link rel="prefetch" href="/assets/js/24.f6d17a57.js"><link rel="prefetch" href="/assets/js/25.d93e7d01.js"><link rel="prefetch" href="/assets/js/26.a3173bd5.js"><link rel="prefetch" href="/assets/js/27.42300fe5.js"><link rel="prefetch" href="/assets/js/28.19910706.js"><link rel="prefetch" href="/assets/js/29.50e0d9ad.js"><link rel="prefetch" href="/assets/js/3.bc388254.js"><link rel="prefetch" href="/assets/js/30.ebcb7fc3.js"><link rel="prefetch" href="/assets/js/31.fdcc6f9a.js"><link rel="prefetch" href="/assets/js/32.e47e4284.js"><link rel="prefetch" href="/assets/js/33.8c81bc5b.js"><link rel="prefetch" href="/assets/js/34.4d627b35.js"><link rel="prefetch" href="/assets/js/35.d697fdcf.js"><link rel="prefetch" href="/assets/js/36.a820d4b9.js"><link rel="prefetch" href="/assets/js/37.e3a70681.js"><link rel="prefetch" href="/assets/js/38.4dd57beb.js"><link rel="prefetch" href="/assets/js/39.2da401de.js"><link rel="prefetch" href="/assets/js/4.b2c0328d.js"><link rel="prefetch" href="/assets/js/40.806d6da4.js"><link rel="prefetch" href="/assets/js/41.96dbc8bd.js"><link rel="prefetch" href="/assets/js/42.9038af3a.js"><link rel="prefetch" href="/assets/js/43.8fe03124.js"><link rel="prefetch" href="/assets/js/44.8b899948.js"><link rel="prefetch" href="/assets/js/45.0a31b026.js"><link rel="prefetch" href="/assets/js/46.2444d88e.js"><link rel="prefetch" href="/assets/js/47.371f9d5a.js"><link rel="prefetch" href="/assets/js/48.3ce05ea0.js"><link rel="prefetch" href="/assets/js/49.2345fbdb.js"><link rel="prefetch" href="/assets/js/5.d9814aa0.js"><link rel="prefetch" href="/assets/js/50.00bd4430.js"><link rel="prefetch" href="/assets/js/52.e9690894.js"><link rel="prefetch" href="/assets/js/53.4d349856.js"><link rel="prefetch" href="/assets/js/54.73f1c7a6.js"><link rel="prefetch" href="/assets/js/55.a4142e27.js"><link rel="prefetch" href="/assets/js/56.b5ed0ae0.js"><link rel="prefetch" href="/assets/js/57.e9c9e0fd.js"><link rel="prefetch" href="/assets/js/58.a7efe57f.js"><link rel="prefetch" href="/assets/js/59.e1cfa9ed.js"><link rel="prefetch" href="/assets/js/6.292626c0.js"><link rel="prefetch" href="/assets/js/60.6aa86999.js"><link rel="prefetch" href="/assets/js/61.4860c910.js"><link rel="prefetch" href="/assets/js/62.363470c1.js"><link rel="prefetch" href="/assets/js/63.58432c66.js"><link rel="prefetch" href="/assets/js/64.bb28d5fd.js"><link rel="prefetch" href="/assets/js/65.ec551ab9.js"><link rel="prefetch" href="/assets/js/66.8b7c199e.js"><link rel="prefetch" href="/assets/js/67.1c5f2bb3.js"><link rel="prefetch" href="/assets/js/68.024dc040.js"><link rel="prefetch" href="/assets/js/69.f17b3f7d.js"><link rel="prefetch" href="/assets/js/7.6a8bf628.js"><link rel="prefetch" href="/assets/js/70.a372f895.js"><link rel="prefetch" href="/assets/js/71.3c16fa6d.js"><link rel="prefetch" href="/assets/js/72.129a7a6e.js"><link rel="prefetch" href="/assets/js/73.688fd5ce.js"><link rel="prefetch" href="/assets/js/74.b288d7e2.js"><link rel="prefetch" href="/assets/js/8.67d56e91.js"><link rel="prefetch" href="/assets/js/9.82240a08.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.24d7f512.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="配置反向代理"><a href="#配置反向代理" class="header-anchor">#</a> 配置反向代理</h2> <h3 id="配置反向代理例子"><a href="#配置反向代理例子" class="header-anchor">#</a> 配置反向代理例子</h3> <div class="language- extra-class"><pre class="language-text"><code>server {
+        listen       80;
+        server_name  localhost;
+        location / {
+         rewrite ^/(.*) https://$host/$1 permanent;
+        }
+    }
+
+       server {
+        listen 443 ssl;
+        error_page  404 404.html;
+        server_name _;
+        ssl_certificate &quot;/etc/nginx/server.crt&quot;;
+        ssl_certificate_key &quot;/etc/nginx/server.key&quot;;
+        ssl_session_timeout 5m;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #按照这个协议配置
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;#按照这个套件配置
+        ssl_prefer_server_ciphers on;
+        location / {
+            proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass https://132.145.230.64;
+        }
+    }
+</code></pre></div><h2 id="配置gzip功能"><a href="#配置gzip功能" class="header-anchor">#</a> 配置gzip功能</h2> <h3 id="gzip-打开例子"><a href="#gzip-打开例子" class="header-anchor">#</a> gzip 打开例子</h3> <p>ginx实现资源压缩的原理是通过ngx_http_gzip_module模块拦截请求，并对需要做gzip的类型做gzip，ngx_http_gzip_module是Nginx默认集成的，不需要重新编译，直接开启即可。</p> <div class="language- extra-class"><pre class="language-text"><code>gzip on;
+gzip_min_length  5k;
+gzip_buffers     4 16k;
+#gzip_http_version 1.0;
+gzip_comp_level 3;
+gzip_types       text/plain application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+gzip_vary on;
+</code></pre></div><h3 id="配置指令详细注释"><a href="#配置指令详细注释" class="header-anchor">#</a> 配置指令详细注释</h3> <div class="language- extra-class"><pre class="language-text"><code>gzip on|off
+# 默认值: gzip off
+# 开启或者关闭gzip模块
+
+gzip_static on|off
+
+# nginx对于静态文件的处理模块
+# 该模块可以读取预先压缩的gz文件，这样可以减少每次请求进行gzip压缩的CPU资源消耗。该模块启用后，nginx首先检查是否存在请求静态文件的gz结尾的文件，如果有则直接返回该gz文件内容。为了要兼容不支持gzip的浏览器，启用gzip_static模块就必须同时保留原始静态文件和gz文件。这样的话，在有大量静态文件的情况下，将会大大增加磁盘空间。我们可以利用nginx的反向代理功能实现只保留gz文件。
+# 可以google&quot;nginx gzip_static&quot;了解更多
+
+gzip_comp_level 4
+
+# 默认值：1(建议选择为4)
+# gzip压缩比/压缩级别，压缩级别 1-9，级别越高压缩率越大，当然压缩时间也就越长（传输快但比较消耗cpu）。
+
+gzip_buffers 4 16k
+
+# 默认值: gzip_buffers 4 4k/8k
+# 设置系统获取几个单位的缓存用于存储gzip的压缩结果数据流。 例如 4 4k 代表以4k为单位，按照原始数据大小以4k为单位的4倍申请内存。 4 8k 代表以8k为单位，按照原始数据大小以8k为单位的4倍申请内存。
+# 如果没有设置，默认值是申请跟原始数据相同大小的内存空间去存储gzip压缩结果。
+
+gzip_types mime-type [mime-type ...]
+
+# 默认值: gzip_types text/html (默认不对js/css文件进行压缩)
+# 压缩类型，匹配MIME类型进行压缩
+# 不能用通配符 text/*
+# (无论是否指定)text/html默认已经压缩
+# 设置哪压缩种文本文件可参考 conf/mime.types
+
+gzip_min_length  1k
+
+# 默认值: 0 ，不管页面多大都压缩
+# 设置允许压缩的页面最小字节数，页面字节数从header头中的Content-Length中进行获取。
+# 建议设置成大于1k的字节数，小于1k可能会越压越大。 即: gzip_min_length 1024
+
+gzip_http_version 1.0|1.1
+
+# 默认值: gzip_http_version 1.1(就是说对HTTP/1.1协议的请求才会进行gzip压缩)
+# 识别http的协议版本。由于早期的一些浏览器或者http客户端，可能不支持gzip自解压，用户就会看到乱码，所以做一些判断还是有必要的。
+# 注：99.99%的浏览器基本上都支持gzip解压了，所以可以不用设这个值,保持系统默认即可。
+# 假设我们使用的是默认值1.1，如果我们使用了proxy_pass进行反向代理，那么nginx和后端的upstream server之间是用HTTP/1.0协议通信的，如果我们使用nginx通过反向代理做Cache Server，而且前端的nginx没有开启gzip，同时，我们后端的nginx上没有设置gzip_http_version为1.0，那么Cache的url将不会进行gzip压缩
+
+gzip_proxied [off|expired|no-cache|no-store|private|no_last_modified|no_etag|auth|any] ...
+
+# 默认值：off
+# Nginx作为反向代理的时候启用，开启或者关闭后端服务器返回的结果，匹配的前提是后端服务器必须要返回包含&quot;Via&quot;的 header头。
+off - 关闭所有的代理结果数据的压缩
+expired - 启用压缩，如果header头中包含 &quot;Expires&quot; 头信息
+no-cache - 启用压缩，如果header头中包含 &quot;Cache-Control:no-cache&quot; 头信息
+no-store - 启用压缩，如果header头中包含 &quot;Cache-Control:no-store&quot; 头信息
+private - 启用压缩，如果header头中包含 &quot;Cache-Control:private&quot; 头信息
+no_last_modified - 启用压缩,如果header头中不包含 &quot;Last-Modified&quot; 头信息
+no_etag - 启用压缩 ,如果header头中不包含 &quot;ETag&quot; 头信息
+auth - 启用压缩 , 如果header头中包含 &quot;Authorization&quot; 头信息
+any - 无条件启用压缩
+
+gzip_vary on
+
+# 和http头有关系，加个vary头，给代理服务器用的，有的浏览器支持压缩，有的不支持，所以避免浪费不支持的也压缩，所以根据客户端的HTTP头来判断，是否需要压缩
+
+gzip_disable &quot;MSIE [1-6].&quot;
+
+# 禁用IE6的gzip压缩，又是因为杯具的IE6。当然，IE6目前依然广泛的存在，所以这里你也可以设置为“MSIE [1-5].”
+# IE6的某些版本对gzip的压缩支持很不好，会造成页面的假死，今天产品的同学就测试出了这个问题
+后来调试后，发现是对img进行gzip后造成IE6的假死，把对img的gzip压缩去掉后就正常了
+为了确保其它的IE6版本不出问题，所以建议加上gzip_disable的设置
+</code></pre></div><h2 id="配置代理缓存"><a href="#配置代理缓存" class="header-anchor">#</a> 配置代理缓存</h2> <div class="language- extra-class"><pre class="language-text"><code>proxy_cache_path /cache levels=1:2 keys_zone=cache:10m max_size=10g inactive=60m use_temp_path=off;
+
+server{
+	listen 80;
+	server_name proxya.com;
+	location / {
+		proxy_pass http://proxyb.com;
+	}
+	location ~ .*\.(gif|jpg|png|css|js)(.*)  {
+        proxy_pass http://proxyb.com;
+		proxy_cache cache;
+    	proxy_cache_valid   200 304 12h;
+    	proxy_cache_valid   any 10m;
+    	add_header  Nginx-Cache &quot;$upstream_cache_status&quot;;
+		proxy_cache_key $host$uri$is_args$args;
+	}
+}
+
+# proxy_cache_path 缓存文件存放位置
+# levels=1:2       代表缓存的目录结构为2级目录
+# keys_zone=cache:10m 申请一个10兆的空间存在缓存的key 名称为cache
+# max_size 最大存储缓存的空间10G
+# inactive 未被访问文件在缓存中保留时间，本配置中如果60分钟未被访问则不论状态是否为expired，缓存控制程序会删掉文件。inactive默认是10分钟。
+           需要注意的是，inactive和expired配置项的含义是不同的，expired只是缓存过期，但不会被删除，inactive是删除指定时间内未被访问的缓存文件
+# use_temp_path 如果为off，则nginx会将缓存文件直接写入指定的cache文件中，而不是使用temp_path存储。
+# proxy_cache cache;  启动名称为cache的缓存
+# proxy_cache_valid 200 302 10m; 只对响应码为200，301，302的访问请求资源设置缓存时间10m
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.49a8ab27.js" defer></script><script src="/assets/js/2.c25d0ff7.js" defer></script><script src="/assets/js/51.dd05fd07.js" defer></script>
+  </body>
+</html>
