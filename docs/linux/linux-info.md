@@ -18,6 +18,14 @@ title: 查看系统信息
 - set a special rule for this user in the /etc/sudoers file using the following (note that there is no %, which is used to denote a group):
 - oracle    ALL=(ALL:ALL) ALL
 - usermod -a -G wheel felix    //注意改成你自己的用户名
+## sudo 用户取消密码验证
+```
+修改 /etc/sudoers 
+找到如下授权，注释
+%admin ALL=(ALL) ALL
+修改为新的授权，意思是不需要密码执行
+%admin ALL=(ALL) NOPASSWD: ALL
+```
 
 ## scp example
 - scp -r root@192.168.62.10:/root/ .
