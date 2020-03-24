@@ -1,6 +1,10 @@
 ---
 title: 定时执行 crontab
 ---
+### crontab 环境变量
+需要在脚本中手动引入环境变量，可以用source 也可以用export 写死环境变量,在脚本里面添加下面的脚本
+>source ~/.bash_profile
+
 
 ### crontab 每2小时执行一次
 
