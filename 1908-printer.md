@@ -8,7 +8,7 @@ host: bjsop20a.cn.oracle.com
 
 Protocol:Line Printer Daemon - LPD
 
-Use : FX Print Driver for Mac OS X v1.5 --> FF Print Driver for Mac OS X v2.0
+Use : FF Print Driver for Mac OS X v2.0
 
 不要用系统自动识别的 4070 PS的驱动！！！
 ```
